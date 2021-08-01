@@ -1,6 +1,6 @@
-from distutils.core import setup
-# read the contents of your README file
 from os import path
+
+from setuptools import find_packages, setup
 
 this_directory = path.abspath(path.dirname(__file__))
 with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
@@ -8,8 +8,8 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
   name = 'pymugen',
-  packages = ['pymugen'],
-  version = '1.1',
+  packages = find_packages(),
+  version = '1.2',
   license='MIT',
   description = 'Management about FASTA and VCF files.',
   long_description=long_description,
